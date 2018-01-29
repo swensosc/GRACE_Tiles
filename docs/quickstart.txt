@@ -1,0 +1,38 @@
+These scripts will take GRACE spherical harmonic coefficients 
+and process them in a manner similar to other mascon approaches.  
+The difference is that a user can change the parameters and mascon 
+shapes, etc, easily without having the full gravity field 
+determination package. 
+
+To run the grace.tiles.py script, one needs to specify some of 
+the directory names that point to the data in the main script, 
+called grace.tiles.py.  These directories are called 'data_dir', 
+etc, and can be found in the script after:
+
+#-----------------------------------------------------
+#  set control parameters
+#-----------------------------------------------------
+
+The directory structure is arbitrary, and can be reconfigured
+by the user.
+
+There are a few places where one can plot the intermediate 
+results to check whether the script is operating as expected.  
+Look for: "# plot for debugging purposes"
+
+Spherical harmonic coefficients can be found here:
+https://podaac.jpl.nasa.gov/gravity/grace/
+
+The script has been separated into a number of steps, and to 
+speed up the process, certain steps can be switched on and off 
+using flags.  For example, once the tiles have been defined, and 
+a tile transfer matrix created, the matrix does not have to be 
+re-created; instead it can be read from a file.  
+
+Gridded GRACE data can be used to compute an a priori variance 
+estimate.  These data are available here:
+
+https://grace.jpl.nasa.gov/data/get-data/monthly-mass-grids-land/
+
+
+
